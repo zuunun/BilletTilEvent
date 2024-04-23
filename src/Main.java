@@ -17,7 +17,7 @@ public class Main {
             System.out.println("Insert ticket id:");
             int ticketId = scanner.nextInt();
 
-            System.out.println("Er dette en dørbillet (d), forsaglsbillet (f) eller studiebillet (s)?");
+            System.out.println("Is this a doorticket(d), presaleticket (p) or a studentpresaleticket (s)?");
             String ticketType = scanner.nextLine().trim().toLowerCase();
             scanner.nextLine();
 
@@ -28,7 +28,7 @@ public class Main {
             if(ticketType.equals("d")){
                 solgteBilletter.tilfoejBillet(new DoorTicket(ticketId));
             }
-            else if (ticketType.equals("f")){
+            else if (ticketType.equals("p")){
                 solgteBilletter.tilfoejBillet(new PreSaleTicket(ticketId, daysTillEvent));
             }
             else if(ticketType.equals("s")){
